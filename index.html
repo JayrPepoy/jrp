@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+  
+    a:hover {
+      color: #0056b3;
+    
+    }
+
+    /* Navbar Styles */
+    #navbar {
+      background-color: #333;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    #navbar ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+
+    #navbar ul li {
+      margin: 0 30px;
+    }
+
+    #navbar ul li a {
+      color: white;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    #navbar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Welcome Section Styles */
+    #welcome-section {
+      background-image: url();
+      text-align: center;
+      padding: 120px 20px;
+      height: 50vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    #welcome-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    #welcome-section h1 {
+      font-size: 70px;
+      margin-bottom: 20px;
+      font-weight: 1000;
+      text-shadow: 2px 2px 3px black;
+    }
+
+    #welcome-section p {
+      font-size: 22px;
+      margin: 0;
+      font-weight: 300;
+    }
+    /* Projects Section Styles */
+    #projects {
+      background-color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    #projects h2 {
+      font-size: 40px;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    .project-tile {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-tile:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-tile h3 {
+      font-size: 33px;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .project-tile p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .project-tile a {
+      font-size: 25px;
+      color: #007BFF;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .project-tile a:hover {
+      color: #0056b3;
+    }
+
+    /* Contact Section Styles */
+    #contact {
+      background-color: #f9f9f9;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    #contact p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    #contact a {
+      color: #007BFF;
+      font-weight: 500;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 16px;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+      #navbar ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #navbar ul li {
+        margin-bottom: 10px;
+      }
+
+      #welcome-section h1 {
+        font-size: 40px;
+      }
+
+      #welcome-section p {
+        font-size: 20px;
+      }
+
+      /* Adjust Project Tiles */
+      .project-tile {
+        margin: 10px;
+        width: 90%;
+      }
+    }
+    .project-tile img{
+        width: 10%;
+        height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#welcome-section">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a id="profile-link" href="https://github.com/your-profile" target="_blank">GitHub Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section id="welcome-section">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Explore my work, projects, and learn more about me.</p>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects">
+  <h2>All My Projects</h2>
+  
+  <div class="project-tile">
+    <h3>CatPhotoApp</h3>
+    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Cat Photo">
+    <p>HTML tags give a webpage its structure. You can use HTML tags to add photos, buttons, and other elements to your webpage.</p>
+    <a href="Cat Photo App.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>CafeMenu</h3>
+    <img src="https://global.discourse-cdn.com/freecodecamp/optimized/4X/b/f/2/bf2ceb8fac61aed945f9252c402e61719de82339_2_358x500.png" alt="Cafe Menu">
+    <p>CSS tells the browser how to display your webpage. You can use CSS to set the color, font, size, and other aspects of HTML elements.</p>
+    <a href="Cafe Menu.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Colored Markers</h3>
+    <img src="https://raw.githubusercontent.com/chanwaihan/Colored-Markers/main/colored-markers-preview.jpg" alt="Colored Markers">
+    <p>Selecting the correct colors for your webpage can greatly improve the aesthetic appeal to your readers.</p>
+    <a href="Colored markers.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Registration Form</h3>
+    <img src="https://foolishdeveloper.com/wp-content/uploads/2024/02/image-10.png" alt="Registration Form">
+    <p>You can use HTML forms to collect information from people who visit your webpage.</p>
+    <a href="Registration Form.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Photo Gallery</h3>
+    <img src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2011/07/no-css.png?ssl=1" alt="Photo Gallery">
+    <p>Flexbox helps you design your webpage so that it looks good on any screen size.</p>
+    <a href="Photo Gallery.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Nutrition label</h3>
+    <img src="https://www.fda.gov/files/nfl-howtounderstand-honey.png" alt="Nutrition label">
+    <p>Typography is the art of styling your text to be easily readable and suit its purpose.</p>
+    <a href="Nutrition label.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Build a quiz</h3>
+    <img src="https://img-c.udemycdn.com/course/750x422/2223252_0708.jpg" alt="Build a quiz">
+    <p>Accessibility is making your webpage easy for all people to use – even people with disabilities.</p>
+    <a href="Build a quiz.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Balance Sheet</h3>
+    <img src="https://global.discourse-cdn.com/freecodecamp/optimized/4X/c/7/9/c7970e5774ca3a4adab8c6ec3289bb6e3d0607cc_2_480x500.png" alt="Balance Sheet">
+    <p>You can use CSS pseudo selectors to change specific HTML elements.</p>
+    <a href="Balance Sheet.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Cat Painting</h3>
+    <img src="https://pbs.twimg.com/media/GHrwFAZWIAAebLm.png" alt="Cat Painting">
+    <p>Mastering CSS positioning is essential for creating visually appealing and responsive web layouts In this course, you will build a cat painting.</p>
+    <a href="Cat Painting.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Building a Piano</h3>
+    <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fivb6hj61b6ntuo70lt4z.png" alt="Building a Piano">
+    <p>Responsive Design tells your webpage how it should look on different-sized screens.</p>
+    <a href="Building a Piano.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>City Skyline</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsN8mFHefb4ZWAtfqw9T2O44IYQhQgCOoFwQ&s" alt="City Skyline">
+    <p>CSS variables help you organize your styles and reuse them.</p>
+    <a href="City Skyline.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Magazine</h3>
+    <img src="https://freefrontend.com/assets/img/css-magazine-layouts/2021-arcade-life-magazine-layout-2.jpg" alt="Magazine">
+    <p>CSS Grid gives you control over the rows and columns of your webpage design.</p>
+    <a href="Magazine.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Ferris Wheel</h3>
+    <img src="https://miro.medium.com/v2/resize:fit:756/1*p-ZGWlm_u6UgjONX8iIvTg.png" alt="Ferris Wheel ">
+    <p>You can use CSS animation to draw attention to specific sections of your webpage and make it more engaging.</p>
+    <a href="Ferris Wheel.html" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-tile">
+    <h3>Building a Penguin</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrJ0aLshSA_YmMKJd6xzKf1K4uJS54vyk_qA&s" alt="Building a Penguin">
+    <p>Every HTML element is its own box with its own spacing and a border. This is called the Box Model.</p>
+    <a href="Building a Penguin.html" target="_blank">View Project</a>
+  </div>
+
+
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, feel free to reach out via email at <a href="mailto:adrianpaulo.pili.pbtsc@gmail.com">adrianpaulo.pili.pbtsc@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Adrian Pili. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

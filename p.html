@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Documentation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    #navbar {
+      width: 250px;
+      background-color: #2d3a3b;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      height: 100%;
+    }
+
+    #navbar header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #navbar .nav-link {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    #navbar .nav-link:hover {
+      background-color: #4f5b5b;
+    }
+
+    #main-doc {
+      margin-left: 270px;
+      padding: 20px;
+    }
+
+    .main-section {
+      margin-bottom: 40px;
+    }
+
+    .main-section header {
+      background-color: #2d3a3b;
+      color: white;
+      padding: 10px;
+    }
+
+    .main-section h2 {
+      color: #2d3a3b;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      font-size: 14px;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    @media (max-width: 768px) {
+      #navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      #main-doc {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <header>
+      <h1>Technical Documentation</h1>
+    </header>
+    <a href="#HTML_Overview" class="nav-link">HTML Overview</a>
+    <a href="#CSS_Overview" class="nav-link">CSS Overview</a>
+    <a href="#JavaScript_Overview" class="nav-link">JavaScript Overview</a>
+    <a href="#SQL_Overview" class="nav-link">SQL Overview</a>
+    <a href="#Python_Overview" class="nav-link">Python Overview</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="HTML_Overview">
+      <header>
+        <h2>HTML Overview</h2>
+      </header>
+      <p>HTML (HyperText Markup Language) is the standard language used to create webpages. It defines the structure of web documents and consists of elements that the browser renders.</p>
+      <p>HTML elements are used to structure the page and define content like headings, paragraphs, links, images, and more.</p>
+      <p>HTML tags are enclosed in angle brackets, with an opening and closing tag.</p>
+      <p>Common HTML elements include:</p>
+      <ul>
+        <li><code>&lt;h1&gt;</code> for top-level headings</li>
+        <li><code>&lt;p&gt;</code> for paragraphs</li>
+        <li><code>&lt;a&gt;</code> for links</li>
+        <li><code>&lt;img&gt;</code> for images</li>
+        <li><code>&lt;div&gt;</code> for division blocks</li>
+      </ul>
+      <p>Example of HTML syntax:</p>
+      <pre><code>&lt;h1&gt;Welcome to HTML!&lt;/h1&gt;</code></pre>
+      <p>HTML5 is the latest version of HTML and comes with new features like the <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements.</p>
+      <code>&lt;!DOCTYPE html&gt;</code>
+    </section>
+
+    <section class="main-section" id="CSS_Overview">
+      <header>
+        <h2>CSS Overview</h2>
+      </header>
+      <p>CSS (Cascading Style Sheets) is used to control the layout and style of a webpage. It defines how HTML elements should be displayed on the screen.</p>
+      <p>CSS allows you to apply styles like colors, fonts, spacing, and positioning.</p>
+      <ul>
+        <li><code>color</code>: Specifies the text color</li>
+        <li><code>font-family</code>: Sets the font for the page</li>
+        <li><code>background-color</code>: Changes the background color</li>
+        <li><code>margin</code>: Sets the margin around elements</li>
+        <li><code>padding</code>: Adds space inside an element</li>
+      </ul>
+      <p>Example of CSS syntax:</p>
+      <pre><code>body { background-color: #f4f4f4; }</code></pre>
+      <p>CSS can be applied inline, internally, or externally. External stylesheets are the most common practice.</p>
+      <code>link rel="stylesheet" href="styles.css"</code>
+    </section>
+
+    <section class="main-section" id="JavaScript_Overview">
+      <header>
+        <h2>JavaScript Overview</h2>
+      </header>
+      <p>JavaScript is a programming language that enables interactive elements on a webpage. It is used to create dynamic content such as animations, form validation, and much more.</p>
+      <p>JavaScript is often used in combination with HTML and CSS to build interactive websites.</p>
+      <ul>
+        <li><code>let</code>: Used to declare variables</li>
+        <li><code>function</code>: Defines reusable blocks of code</li>
+        <li><code>console.log()</code>: Outputs data to the browser console</li>
+        <li><code>document.getElementById()</code>: Accesses HTML elements</li>
+        <li><code>addEventListener()</code>: Adds event listeners to elements</li>
+      </ul>
+      <p>Example of JavaScript code:</p>
+      <pre><code>console.log('Hello, World!');</code></pre>
+      <p>JavaScript can be included in a webpage using <code>&lt;script&gt;</code> tags, or linked externally.</p>
+      <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>
+    </section>
+
+    <section class="main-section" id="SQL_Overview">
+      <header>
+        <h2>SQL Overview</h2>
+      </header>
+      <p>SQL (Structured Query Language) is a programming language designed for managing and manipulating relational databases. It is used to interact with databases by querying, updating, inserting, and deleting data.</p>
+      <p>SQL allows you to manage databases efficiently, making it a critical skill for working with relational databases like MySQL, PostgreSQL, Oracle, and SQLite.</p>
+      <ul>
+        <li><code>SELECT</code>: Retrieves data from a database</li>
+        <li><code>INSERT INTO</code>: Adds new data to a table</li>
+        <li><code>UPDATE</code>: Modifies existing data</li>
+        <li><code>DELETE</code>: Removes data from a table</li>
+        <li><code>CREATE</code>: Defines new database structures such as tables and views</li>
+      </ul>
+      <p>Example of a SQL query to retrieve data from a table:</p>
+      <pre><code>SELECT * FROM users WHERE age > 30;</code></pre>
+      <p>SQL queries can be executed directly through a database management system or via a programming language that supports database interaction.</p>
+      <code>SELECT column_name FROM table_name WHERE condition;</code>
+    </section>
+
+    <section class="main-section" id="Python_Overview">
+      <header>
+        <h2>Python Overview</h2>
+      </header>
+      <p>Python is a high-level, interpreted programming language known for its readability and simplicity. It's widely used in fields like web development, data analysis, machine learning, and automation.</p>
+      <p>Python emphasizes code readability and uses indentation to define code blocks, making it easy to write and maintain.</p>
+      <ul>
+        <li><code>print()</code>: Outputs text or data to the console</li>
+        <li><code>def</code>: Defines a function</li>
+        <li><code>import</code>: Imports external libraries or modules</li>
+        <li><code>if</code>: Conditional statement</li>
+        <li><code>for</code>: Loop through sequences</li>
+      </ul>
+      <p>Example of a Python function:</p>
+      <pre><code>def greet(name):</code>
+      <code>  print("Hello, " + name)</code></pre>
+      <p>Python can be used for web development (with frameworks like Django or Flask), data analysis (using libraries like pandas and NumPy), and much more.</p>
+      <code>import numpy as np</code>
+    </section>
+  </main>
+
+</body>
+
+</html>
